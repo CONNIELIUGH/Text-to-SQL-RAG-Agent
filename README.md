@@ -126,6 +126,15 @@ Agent Output (showing intermediate LLM JSON intent outputs):
 > [!NOTE]
 > The agent detects that the user question is too vague and asks for clarification before generating SQL.
 
+### Example Query 4: Delete all records from vehicle_production. (Unsafe Database Modification Request)
+
+
+Agent Output (showing intermediate LLM JSON intent outputs):
+
+<img width="1480" height="74" alt="Agent warning response for unsafe database modification request" src="https://github.com/user-attachments/assets/101c031f-1f8f-40f4-b00f-29cf4f9a900e" />
+
+> [!NOTE]
+> The agent detects that the user is requesting a database modification operation and stops the workflow instead of generating and executing SQL. This helps ensure that the system only supports safe queries.
 
 ---
 
