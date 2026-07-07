@@ -102,31 +102,30 @@ Before any SQL query is executed, the query is validated to make sure it is safe
 
 Here are some example questions the agent can answer:
 
-```text
-What was the total Model 3/Y production in 2024?
-```
+### Example Query 1: What was the total Model 3/Y production in 2024?
 
-```text
-Show Tesla vehicle deliveries by quarter in 2025.
-```
 
-```text
-Compare vehicle production and vehicle deliveries by quarter in 2024.
-```
+Agent Output (showing intermediate LLM JSON intent outputs):
 
-```text
-For each quarter in 2024, was Tesla producing more vehicles than it delivered?
-```
+<img width="992" height="91" alt="Agent output for total Model 3/Y production in 2024" src="https://github.com/user-attachments/assets/1dde53d4-5b7c-4a40-90e1-cbc64bd59a88" />
 
-```text
-Analyze the gap between Tesla vehicle production and deliveries by quarter from 2023 to 2025. Which quarters had the largest difference?
-```
+### Example Query 2: Analyze the gap between Tesla vehicle production and deliveries by quarter from 2023 to 2025. Which quarters had the largest difference?
 
-```text
-How did operating lease vehicle counts change across quarters from 2023 to 2025?
-```
 
-The agent can also handle ambiguous or unsafe questions. For example, if the user asks a vague question, the agent can request clarification. If the user asks the agent to modify or delete data, the SQL validator blocks the query.
+Agent Output (showing intermediate LLM JSON intent outputs):
+
+<img width="1300" height="354" alt="Screenshot 2026-07-06 at 3 24 38 PM" src="https://github.com/user-attachments/assets/2fcd72fd-471d-41db-9d2d-47d829f4e97f" />
+
+### Example Query 3: I want data. (Example of vague user question)
+
+
+Agent Output (showing intermediate LLM JSON intent outputs):
+
+<img width="1129" height="60" alt="Screenshot 2026-07-06 at 3 25 09 PM" src="https://github.com/user-attachments/assets/d6777c90-c9d3-467c-acc1-ea44b392932d" />
+
+> [!NOTE]
+> The agent detects that the user question is too vague and asks for clarification before generating SQL.
+
 
 ---
 
